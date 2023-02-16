@@ -47,23 +47,22 @@ namespace WEBScraping_c
         {
             List<string> rows = new List<string>();
             string pattern = // @$"{tag1}[А-Яф-я0-9](.*?){tag2}";
-            @$"{tag1}[А БВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя](.*?){tag2}";
+                @$"{tag1}[А БВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя](.*?){tag2}";
             responseBody = "<div> <span class='jknbj'>gbgb шгтищгщтгщш yhyy</span></div>";
 
             //    Console.WriteLine($"TakeTableRow {pattern}");
             string res = String.Empty;
             MatchCollection matches = Regex.Matches(responseBody, pattern);
-             Console.WriteLine($"{responseBody}");
+            Console.WriteLine($"{responseBody}");
             int i = 0;
             foreach (Match match in matches)
             {
-                res = match.Value;//.ToString();
+                res = match.Value; //.ToString();
                 res = res.Replace($"{tag1}", "");
                 res = res.Replace($"{tag2}", "");
-                   rows.Add(res + "\r\n");
-             Console.WriteLine($"{i++}   {res}");
+                rows.Add(res + "\r\n");
+                Console.WriteLine($"{i++}   {res}");
             }
-            
 
             // for(;;){
 
@@ -109,14 +108,14 @@ namespace WEBScraping_c
 
         public void SaveFile(string filePath, List<string> data_save)
         {
-          //  for (int i = 0; i < data_save.Count; i++)
-                File.WriteAllLines(filePath, data_save);
+            //  for (int i = 0; i < data_save.Count; i++)
+            File.WriteAllLines(filePath, data_save);
         }
 
-         public void SaveFile(string filePath, string data_save)
+        public void SaveFile(string filePath, string data_save)
         {
-          //  for (int i = 0; i < data_save.Count; i++)
-                File.WriteAllText(filePath, data_save);
+            //  for (int i = 0; i < data_save.Count; i++)
+            File.WriteAllText(filePath, data_save);
         }
 
         public void FindLink()
@@ -150,25 +149,26 @@ namespace WEBScraping_c
             int i = 0;
             int start = 0,
                 end;
-            string low = responseBody.ToLower().Replace("\r\n","");
+            string low = responseBody.ToLower().Replace("\r\n", "");
 
             for (; ; )
             {
                 start = low.IndexOf(tag1);
-                end   = low.IndexOf(tag2);
+                end = low.IndexOf(tag2);
 
-                if (start > end){
+                if (start > end)
+                {
                     var t = start;
-                    start=end;
+                    start = end;
                     end = t;
                 }
 
-             //   Console.WriteLine($"{low} ->   {start} - {end}");
+                //   Console.WriteLine($"{low} ->   {start} - {end}");
 
                 if ((start != -1) && (end != -1))
                 {
                     var str = low.Substring(start + tag1.Length + 1, end - start - tag1.Length - 1);
-                    link.Add( str);// + "\r\n");
+                    link.Add(str); // + "\r\n");
                     low = low.Remove(start, end - start + tag2.Length);
                     i++;
                 }
@@ -180,14 +180,14 @@ namespace WEBScraping_c
             return link;
         }
 
-        public string CopyTag(string tag1, string tag2){
-
+        public string CopyTag(string tag1, string tag2)
+        {
             int start = responseBody.IndexOf(tag1);
-            int end   = responseBody.IndexOf(tag2);
+            int end = responseBody.IndexOf(tag2);
 
             return responseBody.Substring(start, end - start + tag2.Length);
         }
-        
+
         public void FindLink(string pattern)
         {
             var link = new List<string>();
@@ -268,6 +268,18 @@ namespace WEBScraping_c
         ~HttpClientScraper()
         {
             Dispose(false);
+        }
+
+        public int CharCount(string str, char c)
+        {
+            int counter = 0;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == c) counter++;
+            }
+
+            return counter;
         }
     }
 }
