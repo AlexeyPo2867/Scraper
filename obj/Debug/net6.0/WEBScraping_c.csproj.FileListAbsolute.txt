@@ -1,0 +1,17 @@
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\WEBScraping_c.exe
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\WEBScraping_c.deps.json
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\WEBScraping_c.runtimeconfig.json
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\WEBScraping_c.dll
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\WEBScraping_c.pdb
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.csproj.AssemblyReference.cache
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.AssemblyInfoInputs.cache
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.AssemblyInfo.cs
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.csproj.CoreCompileInputs.cache
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.dll
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\refint\WEBScraping_c.dll
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.pdb
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.genruntimeconfig.cache
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\ref\WEBScraping_c.dll
+C:\Users\skela\Desktop\Applications\WEBScraping_c\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\skela\Desktop\Applications\WEBScraping_c\obj\Debug\net6.0\WEBScraping_c.csproj.CopyComplete
